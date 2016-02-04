@@ -77,7 +77,7 @@ javascript:
       },
       function(){c||(v=0);}
     );
-    w.setTimeout(function(){v&&(b.disabled=0);},1000+200*c);
+    w.setTimeout(function(){v&&(b.disabled=0);},1000);
   };
   b.ontouchend=function(){b.click();};
   (function l(){
