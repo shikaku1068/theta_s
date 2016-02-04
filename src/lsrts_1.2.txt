@@ -29,7 +29,6 @@ javascript:
   ');
   b=d.getElementById('b');
   n=d.getElementById('n');
-  w.ontouchmove=function(e){e.preventDefault();};
   w.onfocus=function(){
     a=1;
     v=0;
@@ -38,6 +37,7 @@ javascript:
     a=0;
     b.disabled=1;
   };
+  w.ontouchmove=function(e){e.preventDefault();};
   q=[];
   x=new XMLHttpRequest;
   x.timeout=2000;
