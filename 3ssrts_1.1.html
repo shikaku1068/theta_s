@@ -18,7 +18,7 @@ if((navigator.browserLanguage || navigator.language || navigator.userLanguage).m
 }
 document.addEventListener('copy', function(event) {
   var ret = event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
-  if(!ret) {
+  if(ret) {
     event.preventDefault();
   }
 });
