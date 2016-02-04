@@ -17,8 +17,10 @@ if((navigator.browserLanguage || navigator.language || navigator.userLanguage).m
   document.title = jaTitle;
 }
 document.addEventListener('copy', function(event){
-  event.preventDefault();
-  event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
+  if(event.clipboardData) {
+    event.preventDefault();
+    event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
+  }
 });
 </script>
 </head>
