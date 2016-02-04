@@ -127,7 +127,11 @@ var bookmarkletCode = document.querySelector('#bookmarkletCode').innerHTML.repla
 var tn = document.createTextNode(bookmarkletCode);
 document.body.appendChild(tn);
 prompt(
-  (jaFlag? 'テキストを選択してコピーしてください。': 'Select the text and copy it to the clipboard.'),
+  document.title + (jaFlag? '：': ':') + '¥n'
+  + (jaFlag?
+    'テキストを選択してコピーしてください。（' + bookmarkletCode.length + '文字）':
+    'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)'
+  ),
   bookmarkletCode
 );
 </script>
