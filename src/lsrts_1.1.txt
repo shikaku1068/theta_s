@@ -1,0 +1,102 @@
+javascript:
+/*Gadget,booKmarklet,Url,Window,Document,Button,Xrl,Queue,Task,pOst,Reserve,sessionId,tiMeoutid,updatE,Active,busY*/
+(function(g,k,u,w,d,b,x,q,t,o,r,i,m,e,a,y){
+  k='LightweightShutter for '+(g='RICOH THETA S')+' (1.1)';
+  u='http://192.168.1.1/osc/commands/execute';
+  if(u.indexOf(document.domain)!=7){
+    alert('Run this bookmarklet again after opening the URL below. (Wi-Fi connection with '+g+' is required.)\n\n'+u);
+    location.href=u;
+    return;
+  }
+  w=open();
+  d=w.document;
+  d.write('
+    <meta name="viewport" content="width=320px,initial-scale=1,user-scalable=no">
+    <title>'+k+'</title>
+    <style>
+      body{user-select:none;-webkit-user-select:none;font-family:sans-serif;}
+      h1{font:initial;}
+      #b{position:fixed;top:50%25;left:50%25;transform:translate(-50%25,-50%25);width:300px;height:300px;padding:0;border:10px solid #64c832;border-radius:50%25;background:#f0f0f0;color:#757575;font-size:150px;}
+      #b:active{background:#e1e1e1;}
+      #b:disabled{border-color:#757575;}
+    </style>
+    <h1>'+k+' by <a href="http://twitter.com/shikaku1068" target="_blank">shikaku1068</a></h1>
+    <button id="b" disabled>&Theta;</button>
+  ');
+  w.onfocus=function(){
+    a=1;
+    e=1;
+  };
+  w.onblur=function(){
+    a=0;
+    b.disabled=1;
+  };
+  w.ontouchmove=function(e){e.preventDefault();};
+  b=d.getElementById('b');
+  q=[];
+  x=new XMLHttpRequest;
+  x.timeout=2000;
+  x.onloadend=function(){
+    if(x.status==200){
+      t.s&&t.s(JSON.parse(x.responseText));
+    }
+    else{
+      t.e&&t.e();
+    }
+    t.f&&t.f();
+    o();
+  };
+  o=function(){
+    if(q.length){
+      t=q.shift();
+      x.open('POST',u);
+      x.setRequestHeader('Content-Type','application/json;charset=utf-8');
+      x.setRequestHeader('Accept','application/json');
+      x.send(JSON.stringify({name:t.c,parameters:t.p}));
+    }
+  };
+  r=function(c,p,s,e,f){
+    q.unshift({c:c,p:p,s:s,e:e,f:f});
+    (q.length==1)&&o();
+  };
+  b.onclick=function(){
+    b.disabled=1;
+    r(
+      'camera.takePicture',{sessionId:i},
+      function(){
+        w.setTimeout(function(){i&&(b.disabled=0);},1000);
+      },
+      function(){e=1;},
+      null
+    );
+  };
+  b.ontouchend=function(){b.click();};
+  (function l(){
+    if(a&&!y&&(!i||e)){
+      y=1;
+      r(
+        'camera.startSession',{},
+        function(d,r){
+          if(d.state=='done'){
+            r=d.results;
+            i=r.sessionId;
+            e=0;
+            w.clearTimeout(m);
+            m=w.setTimeout(function(){e=1;},r.timeout*500);
+            b.disabled=0;
+          }
+        },
+        function(){
+          i=0;
+          b.disabled=1;
+        },
+        function(){y=0;}
+      );
+    }
+    w.setTimeout(l,200);
+  })();
+  setTimeout(function(){
+    w.focus();
+    a||alert(k+' has been opened in another tab.');
+  },1000);
+})();
