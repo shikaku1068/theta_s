@@ -16,9 +16,11 @@ var jaTitle = '3秒シャッター for RICOH THETA S (1.1)';
 if((navigator.browserLanguage || navigator.language || navigator.userLanguage).match(/^ja\b/i)) {
   document.title = jaTitle;
 }
-document.addEventListener('copy', function(event){
-  event.preventDefault();
-  event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
+document.addEventListener('copy', function(event) {
+  var ret = event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
+  if(!ret) {
+    event.preventDefault();
+  }
 });
 </script>
 </head>
