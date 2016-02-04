@@ -118,15 +118,14 @@ javascript:
 <script src="/theta_s/js/analyticstracking.js"></script>
 </head>
 <body>
-<div id="bookmarkletCodeContainer"></div>
 <script>
 var jaFlag = ((navigator.browserLanguage || navigator.language || navigator.userLanguage).match(/^ja\b/i)? true: false);
 if(jaFlag) {
   document.title = document.querySelector('#jaTitle').innerHTML;
 }
 var bookmarkletCode = document.querySelector('#bookmarkletCode').innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
-bookmarkletCode = bookmarkletCode.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-document.querySelector('#bookmarkletCodeContainer').innerHTML = bookmarkletCode;
+var element = document.createElement('div');
+element.appendChild(document.createTextNode(bookmarkletCode));
 prompt(
   (jaFlag? 'テキストを選択してコピーしてください。': 'Select the text and copy it to the clipboard.'),
   bookmarkletCode
