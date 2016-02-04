@@ -124,8 +124,9 @@ if(jaFlag) {
   document.title = document.querySelector('#jaTitle').innerHTML;
 }
 var bookmarkletCode = document.querySelector('#bookmarkletCode').innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
-var textNode = document.createTextNode(bookmarkletCode);
-document.body.appendChild(textNode);
+document.body.appendChild(
+  document.createTextNode(bookmarkletCode)
+);
 prompt(
   (jaFlag? 'テキストを選択してコピーしてください。': 'Select the text and copy it to the clipboard.'),
   bookmarkletCode
