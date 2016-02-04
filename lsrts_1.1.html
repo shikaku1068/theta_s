@@ -17,7 +17,7 @@ if((navigator.browserLanguage || navigator.language || navigator.userLanguage).m
   document.title = jaTitle;
 }
 document.addEventListener('copy', function(event){
-  if(event.clipboardData) {
+  if(event.clipboardData.setData) {
     event.preventDefault();
     event.clipboardData.setData('text/plain', document.body.innerHTML.trim());
   }
