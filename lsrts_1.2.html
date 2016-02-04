@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>LightweightShutter for RICOH THETA S (1.2)</title>
 <script type="text/plain" id="jaTitle">軽量シャッター for RICOH THETA S (1.2)</script>
-<script type="text/plain" id="content">
+<script type="text/plain" id="bookmarkletCode">
 javascript:
 (function(g,k,u,w,d,b,n,x,q,t,p,r,i,m,v,a,y,c){
   k='LightweightShutter for '+(g='RICOH THETA S')+' (1.2)';
@@ -115,28 +115,21 @@ javascript:
   },1000);
 })();
 </script>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-72892673-1', 'auto');
-ga('send', 'pageview');
-</script>
+<script src="/theta_s/js/analyticstracking.js"></script>
+</head>
+<body>
+<div id="bookmarkletCodeContainer"></div>
 <script>
 var jaFlag = ((navigator.browserLanguage || navigator.language || navigator.userLanguage).match(/^ja\b/i)? true: false);
 if(jaFlag) {
   document.title = document.querySelector('#jaTitle').innerHTML;
 }
-onload = function(event){
-  var content = document.querySelector('#content').innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
-  document.body.innerHTML = content;
-  prompt(
-    (jaFlag? 'テキストを選択してコピーしてください。': 'Select the text and copy it to the clipboard.'),
-    content
-  );
-};
+var bookmarkletCode = document.querySelector('#bookmarkletCode').innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
+document.querySelector('#bookmarkletCodeContainer').innerHTML = bookmarkletCode;
+prompt(
+  (jaFlag? 'テキストを選択してコピーしてください。': 'Select the text and copy it to the clipboard.'),
+  bookmarkletCode;
+);
 </script>
-</head>
-<body></body>
+</body>
 </html>
