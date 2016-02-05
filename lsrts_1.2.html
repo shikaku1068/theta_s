@@ -119,20 +119,26 @@ javascript:
 </head>
 <body>
 <script>
-var jaFlag = ((navigator.browserLanguage || navigator.language || navigator.userLanguage).match(/^ja\b/i)? true: false);
+var jaFlag = ((navigator.language || "").match(/^ja\b/i)? true: false);
 if(jaFlag) {
-  document.title = document.querySelector('#jaTitle').innerHTML;
+  var jaTitleNode = document.querySelector('#jaTitle');
+  if(jaTitleNode) {
+    document.title = jaTitleNode.innerHTML;
+  }
 }
-var bookmarkletCode = document.querySelector('#bookmarkletCode').innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
-var tn = document.createTextNode(bookmarkletCode);
-document.body.appendChild(tn);
-prompt(
-  (jaFlag?
-    'テキストを選択してコピーしてください。（' + bookmarkletCode.length + '文字）':
-    'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)'
-  ),
-  bookmarkletCode
-);
+var bookmarkletCodeNode = document.querySelector('#bookmarkletCode');
+if(bookmarkletCodeNode) {
+  var bookmarkletCode = bookmarkletCodeNode.innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
+  var textNode = document.createTextNode(bookmarkletCode);
+  document.body.appendChild(textNode);
+  prompt(
+    (jaFlag?
+      'テキストを選択してコピーしてください。（' + bookmarkletCode.length + '文字）':
+      'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)'
+    ),
+    bookmarkletCode
+  );
+}
 </script>
 </body>
 </html>
