@@ -1,5 +1,5 @@
+/*Gadget,booKmarklet,Url,Window,Document,Button,divisioN,Xrl,Queue,Task,Post,Reserve,sessionId,tiMeoutid,Valid,Active,busY,processCount*/
 javascript:
-/*Gadget,booKmarklet,Url,Window,Document,Button,divisioN,Xrl,Queue,Task,Post,Reserve,sessionId,tiMeoutid,Valid,Active,busY,processCount,*/
 (function(g,k,u,w,d,b,n,x,q,t,p,r,i,m,v,a,y,c){
   k='LightweightShutter for '+(g='RICOH THETA S')+' (1.2)';
   u='http://192.168.1.1/osc/';
@@ -29,15 +29,6 @@ javascript:
   ');
   b=d.getElementById('b');
   n=d.getElementById('n');
-  w.onfocus=function(){
-    a=1;
-    v=0;
-  };
-  w.onblur=function(){
-    a=0;
-    b.disabled=1;
-  };
-  w.ontouchmove=function(e){e.preventDefault();};
   q=[];
   x=new XMLHttpRequest;
   x.timeout=2000;
@@ -64,6 +55,15 @@ javascript:
     t||p();
   };
   c=0;
+  w.onfocus=function(){
+    a=1;
+    v=0;
+  };
+  w.onblur=function(){
+    a=0;
+    b.disabled=1;
+  };
+  w.ontouchmove=function(e){e.preventDefault();};
   b.onclick=function(){
     b.disabled=1;
     r(
@@ -74,8 +74,7 @@ javascript:
           n.innerHTML=c;
           w.setTimeout(function(){r(1,{id:o.id},s,0,function(){c--;n.innerHTML=(c?c:'');});},1000);
         }
-      },
-      function(){c||(v=0);}
+      }
     );
     w.setTimeout(function(){v&&(b.disabled=0);},1000);
   };
