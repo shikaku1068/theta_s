@@ -1,5 +1,5 @@
-javascript:
 /*Gadget,booKmarklet,Url,Window,Document,Button,Xrl,Queue,Task,pOst,Reserve,sessionId,tiMeoutid,updatE,Active,busY*/
+javascript:
 (function(g,k,u,w,d,b,x,q,t,o,r,i,m,e,a,y){
   k='LightweightShutter for '+(g='RICOH THETA S')+' (1.1)';
   u='http://192.168.1.1/osc/commands/execute';
