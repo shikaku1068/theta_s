@@ -5,7 +5,7 @@ if(bookmarkletCode) {
     var textNode = document.createTextNode(bookmarkletCode);
     document.body.appendChild(textNode);
     prompt(
-      'Select the text and copy it to the clipboard. (' + bookmarkletCode.length.replace(/\d(?=(\d{3})+(?!\d))/g) + ' characters)',
+      'Select the text and copy it to the clipboard. (' + bookmarkletCode.length.replace(/\d(?=(\d{3})+(?!\d))/g, '$0') + ' characters)',
       bookmarkletCode
     );
   });
