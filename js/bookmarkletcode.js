@@ -4,9 +4,9 @@ if(bookmarkletCode) {
   addEventListener('load', function() {
     var textNode = document.createTextNode(bookmarkletCode);
     document.body.appendChild(textNode);
-    var number = String(bookmarkletCode.length).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$0,');
+    var number = String(bookmarkletCode.length).replace(/\d(?=(?:\d{3})+(?!\d))/g, '¥0,');
     prompt(
-      'Select the text and copy it to the clipboard. (' + number + ' characters)',
+      'Select the bookmarklet code from beginning to end and copy it to the clipboard. (' + number + ' characters)',
       bookmarkletCode
     );
   });
