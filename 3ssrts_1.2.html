@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>3SecondsShutter for RICOH THETA S (1.2)</title>
-<script type="text/plain" id="jaTitle">3秒シャッター for RICOH THETA S (1.2)</script>
-<script type="text/plain" id="bookmarkletCode">
+<script src="/theta_s/js/jatitle.js">3秒シャッター for RICOH THETA S (1.2)</script>
+<script src="/theta_s/js/bookmarkletcode.js">
 javascript:
 (function(g,k,u,w,d,b,n,x,q,t,p,r,i,m,v,a,y,c,e){
   k='3SecondsShutter for '+(g='RICOH THETA S')+' (1.2)';
@@ -35,15 +35,6 @@ javascript:
   ');
   b=d.getElementById('b');
   n=d.getElementById('n');
-  w.onfocus=function(){
-    a=1;
-    v=0;
-  };
-  w.onblur=function(){
-    a=0;
-    b.disabled=1;
-  };
-  w.ontouchmove=function(e){e.preventDefault();};
   q=[];
   x=new XMLHttpRequest;
   x.timeout=2000;
@@ -70,6 +61,15 @@ javascript:
     t||p();
   };
   c=0;
+  w.onfocus=function(){
+    a=1;
+    v=0;
+  };
+  w.onblur=function(){
+    a=0;
+    b.disabled=1;
+  };
+  w.ontouchmove=function(e){e.preventDefault();};
   b.onclick=function(){
     b.disabled=1;
     e=3;
@@ -87,8 +87,7 @@ javascript:
               n.innerHTML=c;
               w.setTimeout(function(){r(1,{id:o.id},s,0,function(){c--;n.innerHTML=(c?c:'');});},1000);
             }
-          },
-          function(){c||(v=0);}
+          }
         );
         b.innerHTML='&Theta;';
       }
@@ -128,27 +127,5 @@ javascript:
 <script src="/theta_s/js/analyticstracking.js"></script>
 </head>
 <body>
-<script>
-var jaFlag = ((navigator.language || "").match(/^ja\b/i)? true: false);
-if(jaFlag) {
-  var jaTitleNode = document.querySelector('#jaTitle');
-  if(jaTitleNode) {
-    document.title = jaTitleNode.innerHTML;
-  }
-}
-var bookmarkletCodeNode = document.querySelector('#bookmarkletCode');
-if(bookmarkletCodeNode) {
-  var bookmarkletCode = bookmarkletCodeNode.innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
-  var textNode = document.createTextNode(bookmarkletCode);
-  document.body.appendChild(textNode);
-  prompt(
-    (jaFlag?
-      'テキストを選択してコピーしてください。（' + bookmarkletCode.length + '文字）':
-      'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)'
-    ),
-    bookmarkletCode
-  );
-}
-</script>
 </body>
 </html>
