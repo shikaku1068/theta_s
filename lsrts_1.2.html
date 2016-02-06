@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LightweightShutter for RICOH THETA S (1.2)</title>
-<script type="text/plain" id="jaTitle">軽量シャッター for RICOH THETA S (1.2)</script>
+<script src="jatitle.js">s軽量シャッター for RICOH THETA S (1.2)</script>
 <script type="text/plain" id="bookmarkletCode">
 javascript:
 (function(g,k,u,w,d,b,n,x,q,t,p,r,i,m,v,a,y,c){
@@ -119,23 +119,13 @@ javascript:
 </head>
 <body>
 <script>
-var jaFlag = ((navigator.language || "").match(/^ja\b/i)? true: false);
-if(jaFlag) {
-  var jaTitleNode = document.querySelector('#jaTitle');
-  if(jaTitleNode) {
-    document.title = jaTitleNode.innerHTML;
-  }
-}
 var bookmarkletCodeNode = document.querySelector('#bookmarkletCode');
 if(bookmarkletCodeNode) {
   var bookmarkletCode = bookmarkletCodeNode.innerHTML.replace(/^\s+|\s*\n\s*|\s+$/g, '');
   var textNode = document.createTextNode(bookmarkletCode);
   document.body.appendChild(textNode);
   prompt(
-    (jaFlag?
-      'テキストを選択してコピーしてください。（' + bookmarkletCode.length + '文字）':
-      'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)'
-    ),
+    'Select the text and copy it to the clipboard. (' + bookmarkletCode.length + 'characters)',
     bookmarkletCode
   );
 }
