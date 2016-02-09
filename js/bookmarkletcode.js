@@ -6,10 +6,12 @@ if(bookmarkletCode) {
   addEventListener('load', function() {
     var textNode = document.createTextNode(bookmarkletCode);
     document.body.appendChild(textNode);
+/*
     var n = String(bookmarkletCode.length).replace(/\d(?=(?:\d{3})+(?!\d))/g, '$&,');
     prompt(
       'Select the bookmarklet code from beginning to end and copy it to the clipboard. (' + n + ' characters)',
       bookmarkletCode
     );
+*/
   });
 }
