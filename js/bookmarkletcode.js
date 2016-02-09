@@ -1,6 +1,6 @@
 var scriptElements = document.getElementsByTagName('script');
 var bookmarkletCode = scriptElements[scriptElements.length - 1].innerHTML;
-bookmarkletCode = bookmarkletCode.replace(/<¥¥¥//g, '</');
+bookmarkletCode = bookmarkletCode.replace(/<\\\//g, '</');
 bookmarkletCode = bookmarkletCode.replace(/^\s+|\s*\n\s*|\s+$/g, '');
 if(bookmarkletCode) {
   addEventListener('load', function() {
