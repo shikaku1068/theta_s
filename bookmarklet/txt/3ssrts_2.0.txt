@@ -10,7 +10,7 @@ javascript:
   w=open();
   w.document.write('
     <meta name="viewport" content="width=320,initial-scale=1,user-scalable=no">
-    <title>'+k+'</title>
+    <title>'+k+'<\/title>
     <style>
       body{user-select:none;-webkit-user-select:none;font-family:sans-serif;}
       h1{font:initial;}
@@ -21,10 +21,10 @@ javascript:
       #b:active{background:#e1e1e1;}
       #b:disabled{border-color:#757575;}
       #n{position:fixed;right:8px;bottom:8px;}
-    </style>
-    <h1>'+k+' by <a href="http://twitter.com/shikaku1068" target="_blank">shikaku1068</a></h1>
-    <button id="b" disabled>&Theta;</button>
-    <div id="n"></div>
+    <\/style>
+    <h1>'+k+' by <a href="http://twitter.com/shikaku1068" target="_blank">shikaku1068<\/a><\/h1>
+    <button id="b" disabled>&Theta;<\/button>
+    <div id="n"><\/div>
     <script>
       var d,b,n,x,q,t,p,r,i,m,v,a,y,c,e;
       d=document;
