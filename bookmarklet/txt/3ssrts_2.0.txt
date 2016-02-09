@@ -85,9 +85,9 @@ javascript:
               }
             );
             b.innerHTML="&Theta;";
+            setTimeout(function(){v&&(b.disabled=0);},1000);
           }
         })();
-        setTimeout(function(){v&&(b.disabled=0);},1000);
       };
       b.ontouchend=function(){b.click();};
       (function l(){
