@@ -4,46 +4,91 @@
 <meta charset="UTF-8">
 <title>Bookmarklets for RICOH THETA S</title>
 <style>
-.ss{
+.screenshot{
   width:320px; height:auto;
 }
 </style>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-72892673-1', 'auto');
-ga('send', 'pageview');
-</script>
+<script src="/theta_s/js/analyticstracking.js"></script>
 </head>
 <body>
 <div>
-<small><a href="/theta_s/">日本語</a></small>
+<small><a href="/theta_s/">Japanese</a></small>
 </div>
 <h1>Bookmarklets for RICOH THETA S</h1>
 <div>
-<small>2016/01/27 - <a href="http://twitter.com/shikaku1068">shikaku1068</a></small>
+<small>2016/02/11 - <a href="http://twitter.com/shikaku1068">shikaku1068</a></small>
 </div>
 <div>
-<p>In this page you can download bookmarklets to control RICOH THETA S via Web-browsers.</p>
-<p>There are for now two bookmarklets here: “LightweightShutter” makes it possible to shoot at relatively short intervals and “3SecondsShutter” enables 3 seconds timer shooting.</p>
+<p>In this page you can download bookmarklets to control RICOH THETA S remotely via Web-browsers.</p>
+<p>There are three bookmarklets here: "LightweightShutter" makes it possible to repeat shooting at relatively short intervals, "3SecondsShutter" enables 3 seconds timer shooting and "VolumeChanger" provides control of the shutter sound's volume.</p>
 <h2>Precautions for use</h2>
 <ul>
-<li>Some browsers may fail to run the bookmarklets because of their large volume.</li>
+<li>Some browsers may fail to run the bookmarklets because of their length of code.</li>
 <li>The user shall be responsible for any losses that may occur through the use of the bookmarklets downloaded from this site.</li>
 </ul>
 <h2>Usage</h2>
-<p>You need to install the bookmarklets in your browser to run them. Please make reference to other sites and things about installation of a bookmarklet.</p>
-<p>Chrome for Android doesn't allow a bookmarklet to be called from the list of bookmarks, but from the address bar. If using the browser, type the name of the bookmarklet into the bar, and the option to run it will be shown below.</p>
+<p>You need to install the bookmarklets in your browser to run them. If my explanation below isn't enough, please make reference to other sites and things about installation of a bookmarklet.</p>
+<h3>How to install</h3>
+<ol>
+<li>Open a page of a bookmarklet you like from the next section.</li>
+<li>Select the bookmarklet code displayed on the page from beginning to end and copy it to the clipboard.</li>
+<li>Add the page to the bookmark list.</li>
+<li>Open the editorial screen of the bookmark for the page.</li>
+<li>Clear all the text in the URL box, paste the bookmarklet code from the clipboard into it and update the bookmark.</li>
+</ol>
+<h3>How to use</h3>
+<ol>
+<li>Create a new tab and open a dummy page ("about:blank" acceptable). (In some browsers opening a dummy page isn't necessary.)</li>
+<li>Connect your Android device with THETA S by Wi-Fi.</li>
+<li>Call the bookmarklet you installed in the previous subsection from the bookmark list. For the first time it will open a page on THETA S (http://192.168.1.1/osc/info/) and end.
+<li>Call the bookmarklet again. The button to control THETA S will appear.
+</ol>
+<p>Chrome for Android doesn't allow a bookmarklet to be called from the bookmark list, but from the address bar. If using the browser, type the name of the bookmarklet into the bar, and the option to run it will be shown below.</p>
 <h2>Download</h2>
 <dl>
-<dt><h3><a href="/theta_s/bookmarklet/lsrts_1.1.html">LightweightShutter for RICOH THETA S (1.1)</a></h3></dt>
-<dd>“LightweightShutter” makes it possible to shoot at relatively short intervals.</dd>
-<dd><img class="ss" src="/theta_s/img/lsrts-ss.jpg"></dd>
-<dt><h3><a href="/theta_s/bookmarklet/3ssrts_1.1.html">3SecondsShutter for RICOH THETA S (1.1)</a></h3></dt>
-<dd>“3SecondsShutter” enables 3 seconds timer shooting.</dd>
-<dd><img class="ss" src="/theta_s/img/3ssrts-ss.jpg"></dd>
+<dt><h3>LightweightShutter</h3></dt>
+<dd>"LightweightShutter" makes it possible to repeat shooting at relatively short intervals.</dd>
+<dd><a href="/theta_s/bookmarklet/lsrts_2.0.html">LightweightShutter for RICOH THETA S (2.0)</a></dd>
+<dd><img class="screenshot" src="/theta_s/img/lsrts-ss.jpg"></dd>
+<dd>
+<dl>
+<dt>1.0<dt>
+<dd>2016/01/25</dd>
+<dt><a href="/theta_s/bookmarklet/lsrts_1.1.html">1.1</a></dt>
+<dd>2016/01/27</dd>
+<dd>2,125 characters</dd>
+<dt><a href="/theta_s/bookmarklet/lsrts_2.0.html">2.0</a></dt>
+<dd>2016/02/10</dd>
+<dd>2,336 characters</dd>
+</dl>
+</dd>
+<dt><h3>3SecondsShutter</h3></dt>
+<dd>"3SecondsShutter" enables 3 seconds timer shooting.</dd>
+<dd><a href="/theta_s/bookmarklet/3ssrts_2.0.html">3SecondsShutter for RICOH THETA S (2.0)</a></dd>
+<dd><img class="screenshot" src="/theta_s/img/3ssrts-ss.jpg"></dd>
+<dd>
+<dl>
+<dt>1.0</dt>
+<dd>2016/01/25</dd>
+<dt><a href="/theta_s/bookmarklet/lsrts_1.1.html">1.1</a></dt>
+<dd>2016/01/27</dd>
+<dd>2,221 characters</dd>
+<dt><a href="/theta_s/bookmarklet/lsrts_2.0.html">2.0</a></dt>
+<dd>2016/02/10</dd>
+<dd>2,430 characters</dd>
+</dl>
+</dd>
+<dt>VolumeChanger</dt>
+<dd>"VolumeChanger" provides control of the shutter sound's volume.</dd>
+<dd><a href="/theta_s/bookmarklet/vcrts_1.0.html">3SecondsShutter for RICOH THETA S (1.0)</a></dd>
+<dd><img class="screenshot" src="/theta_s/img/vcrts-ss.jpg"></dd>
+<dd>
+<dl>
+<dt><a href="/theta_s/bookmarklet/vcrts_1.0.html">1.0</a></dt>
+<dd>2016/02/10</dd>
+<dd>2,585 characters</dd>
+</dl>
+</dd>
 </dl>
 <h2>Contact</h2>
 If you need any help, please contact me on Twitter at <a href="http://twitter.com/shikaku1068/">shikaku1068</a>.
