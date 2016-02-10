@@ -8,7 +8,7 @@ if(bookmarkletCode) {
     document.head.appendChild(styleElement);
     var sheet = styleElement.sheet;
     sheet.insertRule('body {width: 100%; height: 100%;}', sheet.cssRules.length);
-    sheet.insertRule('#bookmarklet-code {resize: none;}', sheet.cssRules.length);
+    sheet.insertRule('#bookmarklet-code {resize: none; width: 100%; height: 100%;}', sheet.cssRules.length);
     var divElement = document.createElement('textarea');
     divElement.id = 'bookmarklet-code';
     divElement.appendChild(document.createTextNode(bookmarkletCode));
