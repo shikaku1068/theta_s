@@ -7,7 +7,8 @@ if(bookmarkletCode) {
     var styleElement = document.createElement('style');
     document.head.appendChild(styleElement);
     var sheet = styleElement.sheet;
-    sheet.insertRule('#bookmarklet-code {position: absolute; top: 8px; right: 8px; bottom: 8px; left: 8px; resize: none;}', sheet.cssRules.length);
+    sheet.insertRule('html, body {width: 100%; height: 100%; margin: 0;}', sheet.cssRules.length);
+    sheet.insertRule('#bookmarklet-code {box-sizing: border-box; width: 100%; height: 100%; resize: none;}', sheet.cssRules.length);
     var divElement = document.createElement('textarea');
     divElement.id = 'bookmarklet-code';
     divElement.appendChild(document.createTextNode(bookmarkletCode));
