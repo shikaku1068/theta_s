@@ -11,6 +11,7 @@ if(bookmarkletCode) {
     sheet.insertRule('#bookmarklet-code {box-sizing: border-box; width: 100%; height: 100%; resize: none;}', sheet.cssRules.length);
     var divElement = document.createElement('textarea');
     divElement.id = 'bookmarklet-code';
+    divElement.readonly = true;
     divElement.appendChild(document.createTextNode(bookmarkletCode));
     document.body.appendChild(divElement);
 /*
