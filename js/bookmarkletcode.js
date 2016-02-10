@@ -7,11 +7,11 @@ if(bookmarkletCode) {
     var styleElement = document.createElement('style');
     document.head.appendChild(styleElement);
     var sheet = styleElement.sheet;
-    sheet.insertRule('html, body {box-sizing: border-box; width: 100%; height: 100%;}', sheet.cssRules.length);
-    sheet.insertRule('#bookmarklet-code {box-sizing: border-box; width: 100%; height: 100%; resize: none;}', sheet.cssRules.length);
-    var divElement = document.createElement('textarea');
+//    sheet.insertRule('html, body {box-sizing: border-box; width: 100%; height: 100%;}', sheet.cssRules.length);
+//    sheet.insertRule('#bookmarklet-code {box-sizing: border-box; width: 100%; height: 100%; resize: none;}', sheet.cssRules.length);
+    sheet.insertRule('#bookmarklet-code {padding: .5em; border: 1px solid;}', sheet.cssRules.length);
+    var divElement = document.createElement('div');
     divElement.id = 'bookmarklet-code';
-    divElement.readOnly = true;
     divElement.appendChild(document.createTextNode(bookmarkletCode));
     document.body.appendChild(divElement);
 /*
