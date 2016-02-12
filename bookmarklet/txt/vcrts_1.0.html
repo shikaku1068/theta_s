@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VolumeChanger for RICOH THETA S (1.0)</title>
+<script src="/theta_s/js/jatitle.js">ボリュームチェンジャー for RICOH THETA S (1.0)</script>
+<script src="/theta_s/js/bookmarkletcode.js">
+javascript:
+(function(g,k,u,w){
+  g='RICOH THETA S';
+  k='VolumeChanger for '+g+' (1.0)';
+  u='http://192.168.1.1/osc/';
+  if(u.indexOf(document.domain)!=7){
+    alert('Run this bookmarklet again after the URL below will be opened. (Wi-Fi connection with '+g+' is required.)\n\n'+(location=u+'info'));
+    return;
+  }
+  w=open();
+  w.document.write('
+    <meta name="viewport" content="width=320,initial-scale=1,user-scalable=no">
+    <title>'+k+'<\/title>
+    <style>
+      body{user-select:none;-webkit-user-select:none;font-family:sans-serif;}
+      h1{font:initial;}
+      #b{
+        position:fixed;top:50%25;left:50%25;transform:translate(-50%25,-50%25);width:300px;height:300px;padding:0;
+        border:10px solid #3264c8;font-size:150px;
+      }
+      #b:disabled{border-color:#757575;}
+      #b>*{width:100px;height:100px;border:0;background:#f0f0f0;color:#757575;font:initial;}
+      #b>*:active{background:#e1e1e1;}
+      #n{position:fixed;right:8px;bottom:8px;}
+    <\/style>
+    <h1>'+k+' by <a href="http://twitter.com/shikaku1068" target="_blank">shikaku1068<\/a><\/h1>
+    <fieldset id="b" disabled>'+
+      [0,10,20,30,40,50,60,80,100].map(function(v){return '<button>'+v+'<\/button>'}).join('')+'
+    <\/fieldset>
+    <div id="n"><\/div>
+    <script>
+      var d,b,n,x,q,t,p,r,i,m,v,a,y;
+      d=document;
+      b=d.getElementById("b");
+      n=d.getElementById("n");
+      q=[];
+      x=new XMLHttpRequest;
+      x.timeout=2000;
+      x.onloadend=function(){
+        if(x.status==200){
+          t.s&&t.s(JSON.parse(x.responseText));
+        }
+        else{
+          t.e&&t.e();
+        }
+        t.f&&t.f();
+        t=0;
+        q.length&&p();
+      };
+      p=function(){
+        t=q.shift();
+        x.open("POST","'+u+'commands/"+(t.o?"status":"execute"));
+        x.setRequestHeader("Content-Type","application/json;charset=utf-8");
+        x.setRequestHeader("Accept","application/json");
+        x.send(JSON.stringify(t.j));
+      };
+      r=function(o,j,s,e,f){
+        q.push({o:o,j:j,s:s,e:e,f:f});
+        t||p();
+      };
+      onfocus=function(){
+        a=1;
+        v=0;
+      };
+      onblur=function(){
+        a=0;
+        b.disabled=1;
+      };
+      ontouchmove=function(e){e.preventDefault();};
+      [].forEach.call(b.children,function(e){
+        e.onclick=function(){
+          b.disabled=1;
+          r(
+            0,{name:"camera.setOptions",parameters:{sessionId:i,options:{_shutterVolume:e.innerHTML*1}}},
+            function s(o){
+              if(o.progress){
+                setTimeout(function(){r(1,{id:o.id},s);},1000);
+              }
+              else if(o.state=="done"){
+                n.innerHTML=e.innerHTML;
+                alert("The shutter volume has been changed to "+e.innerHTML+".");
+              }
+            }
+          );
+          setTimeout(function(){v&&(b.disabled=0);},1000);
+        };
+        e.ontouchend=function(){e.click();};
+      });
+      (function l(){
+        if(a&&!y&&!v){
+          y=1;
+          r(
+            0,{name:"camera.startSession"},
+            function(o,r){
+              if(r=o.results){
+                i=r.sessionId;
+                v=1;
+                clearTimeout(m);
+                m=setTimeout(function(){v=0;},r.timeout*1000/2);
+                b.disabled=0;
+              }
+            },
+            function(){
+              v=0;
+              b.disabled=1;
+            },
+            function(){y=0;}
+          );
+        }
+        setTimeout(l,1000);
+      })();
+    <\/script>
+  ');
+  setTimeout(function(){
+    w.focus();
+    w.a||alert(k+' has been opened in another tab.');
+  },1000);
+})();
+</script>
+<script src="/theta_s/js/analyticstracking.js"></script>
+</head>
+<body>
+</body>
+</html>
