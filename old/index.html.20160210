@@ -45,7 +45,7 @@
 <dl>
 <dt><h3>軽量シャッター</h3></dt>
 <dd>比較的短い間隔で連続撮影ができるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/lsrts_3.0.html">軽量シャッター for RICOH THETA S（3.0）</a></dd>
+<dd><a href="/theta_s/bookmarklet/lsrts_2.0.html">軽量シャッター for RICOH THETA S（2.0）</a></dd>
 <dd><img class="screenshot" src="/theta_s/img/lsrts-ss.jpg" width="240"></dd>
 <dd>
 <h4>更新履歴</h4>
@@ -60,16 +60,12 @@
 <dt><a href="/theta_s/bookmarklet/lsrts_2.0.html">2.0</a></dt>
 <dd>2016/02/10</dd>
 <dd>2,336文字</dd>
-<dd>親ウィンドウ（タブ）を閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
-<dt><a href="/theta_s/bookmarklet/lsrts_3.0.html">3.0</a></dt>
-<dd>2016/02/13</dd>
-<dd>2,388文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>親ウィンドウを閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
 </dl>
 </dd>
 <dt><h3>3秒シャッター</h3></dt>
 <dd>3秒固定のタイマー撮影ができるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/3ssrts_3.0.html">3秒シャッター for RICOH THETA S（3.0）</a></dd>
+<dd><a href="/theta_s/bookmarklet/3ssrts_2.0.html">3秒シャッター for RICOH THETA S（2.0）</a></dd>
 <dd><img img class="screenshot" src="/theta_s/img/3ssrts-ss.jpg" width="240"></dd>
 <dd>
 <h4>更新履歴</h4>
@@ -84,28 +80,20 @@
 <dt><a href="/theta_s/bookmarklet/3ssrts_2.0.html">2.0</a></dt>
 <dd>2016/02/10</dd>
 <dd>2,430文字</dd>
-<dd>親ウィンドウ（タブ）を閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
-<dt><a href="/theta_s/bookmarklet/3ssrts_3.0.html">3.0</a></dt>
-<dd>2016/02/13</dd>
-<dd>2,482文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>親ウィンドウを閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
 </dl>
 </dd>
 <dt><h3>ボリュームチェンジャー</h3></dt>
 <dd>シャッター音のボリュームを調節できるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/vcrts_2.0.html">ボリュームチェンジャー for RICOH THETA S（2.0）</a></dd>
+<dd><a href="/theta_s/bookmarklet/vcrts_1.0.html">ボリュームチェンジャー for RICOH THETA S（1.0）</a></dd>
 <dd><img img class="screenshot" src="/theta_s/img/vcrts-ss.jpg" width="240"></dd>
 <dd>
 <h4>更新履歴</h4>
 <dl>
 <dt><a href="/theta_s/bookmarklet/vcrts_1.0.html">1.0</a></dt>
 <dd>2016/02/10</dd>
-<dd>2,585文字</dd>
 <dd>公開</dd>
-<dt><a href="/theta_s/bookmarklet/vcrts_2.0.html">2.0</a></dt>
-<dd>2016/02/13</dd>
-<dd>2,623文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>2,585文字</dd>
 </dl>
 </dd>
 </dl>
