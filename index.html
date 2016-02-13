@@ -2,115 +2,110 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>RICOH THETA S用ブックマークレット</title>
+<title>Bookmarklets for RICOH THETA S</title>
 <script src="/theta_s/js/analyticstracking.js"></script>
 </head>
 <body>
 <div>
-<small><a href="/theta_s/index-en.html">English</a></small>
+<small><a href="/theta_s/index-ja.html">Japanese</a></small>
 </div>
-<h1>RICOH THETA S用ブックマークレット</h1>
+<h1>Bookmarklets for RICOH THETA S</h1>
 <div>
 <small>2016/02/13 - <a href="http://twitter.com/shikaku1068">shikaku1068</a></small>
 </div>
 <div>
-<p>このページでは、RICOH THETA Sをウェブブラウザからリモート操作するためのブックマークレットを公開しています。</p>
-<p>比較的短い間隔で撮影を繰り返すことができる「軽量シャッター」、3秒固定のタイマー撮影ができる「3秒シャッター」、シャッター音のボリュームを調節できる「ボリュームチェンジャー」の3種類があります。</p>
-<h2>使用上の注意</h2>
+<p>In this page you can download bookmarklets to control RICOH THETA S remotely via a Web-browser.</p>
+<p>There are three bookmarklets here: "LightweightShutter" makes it possible to repeat shooting at relatively short intervals, "3SecondsShutter" enables 3 seconds timer shooting and "VolumeChanger" provides control of shutter sound's volume.</p>
+<h2>Precautions for use</h2>
 <ul>
-<li>ブックマークレットのサイズが大きいため、一部のブラウザでは使用できない可能性があります。ただし、作者の所有する端末（特定の環境）を使って、最近のバージョンのSafari（iOS版、Mac OS X版）とChrome（iOS版、Android版、Mac OS X版、Windows版）上では動作することを確認しています。</li>
-<li>これらのブックマークレットを使用したことによって被るいかなる損害に対しても、作者は責任を負いません。</li>
+<li>Some browsers may fail to run the bookmarklets because of their length of code.</li>
+<li>The user shall be responsible for any losses that may occur through the use of the bookmarklets downloaded from this site.</li>
 </ul>
-<h2>使用方法</h2>
-<p>
-ブックマークレットを使用するためには、Safariなどのブックマークレット対応ブラウザにおいて、その内容を手作業でブックマークに登録する必要があります。ここでは簡単な手順しか説明しませんので、さらに詳しい情報が必要な場合は他のサイト等を参照してください。
-</p>
-<h3>ブックマークレットの登録</h3>
+<h2>Usage</h2>
+<p>You need to install the bookmarklets in your browser to run them. If my explanation below isn't enough, please make reference to other sites and things about installation of a bookmarklet.</p>
+<h3>How to install</h3>
 <ol>
-<li>次節の「ダウンロード」の中から、登録したいブックマークレットのリンクを開く</li>
-<li>遷移先のページが開いたら通常の方法でブックマークに追加する</li>
-<li>ページに表示されているテキスト（ブックマークレットのコード）を最初（“javascript:(function(){”）から最後（“})();”）まで漏らさず選択して、コピーする</li>
-<li>2で追加したブックマークの編集画面を開く</li>
-<li>アドレス欄に表示されているURLを消去し、代わりに3でコピーしたテキストを貼り付ける</li>
+<li>Open a page of a bookmarklet you like from the next section.</li>
+<li>Add this page to the bookmark list in the usual way.</li>
+<li>Select the bookmarklet code displayed on this page from beginning ("javascript:(function(){") to end ("})();") and copy it to the clipboard.</li>
+<li>Open the editorial screen of the bookmark for this page registered above.</li>
+<li>Clear all the text in the URL box, paste the bookmarklet code from the clipboard into it and update the bookmark.</li>
 </ol>
-<h3>ブックマークレットの使用</h3>
+<h3>How to use</h3>
 <ol>
-<li>ブラウザを起動し、任意のページ（“about:blank”でもよい）を開く（ページを開く必要のないブラウザもある）</li>
-<li>端末をRICOH THETA SにWi-Fi接続する</li>
-<li>ブックマークのリストから前項で登録したブックマークレットを選択して実行する。一度目はRICOH THETA S上のページ（http://192.168.1.1/osc/info）に遷移して止まる</li>
-<li>遷移先のページが開いたら、3と同じブックマークレットを再度実行する。RICOH THETA Sの操作画面に切り替わる</li>
+<li>Start your browser and open a dummy page ("about:blank" acceptable). (In some browsers opening a dummy page isn't necessary.)</li>
+<li>Connect your Android device with THETA S by Wi-Fi.</li>
+<li>Call the bookmarklet you installed in the previous subsection from the bookmark list. For the first time it will open a page on THETA S (http://192.168.1.1/osc/info/) and end.
+<li>Call the bookmarklet again. The button to control THETA S will appear.
 </ol>
-<p>Android版Chromeの場合、他のブラウザとは異なり、ブックマークリストからブックマークレットを実行することはできないようです。このブラウザでは、アドレスバーにブックマークレットの名前を入力すると下部に該当項目のリストが表示されるので、その中からブックマークレットを選択して実行するようにしてください。</p>
-<h2>ダウンロード</h2>
+<p>Chrome for Android doesn't allow a bookmarklet to be called from the bookmark list, but from the address bar. If using this browser, type the name of the bookmarklet into the bar, and the option to run it will be shown below.</p>
+<h2>Download</h2>
 <dl>
-<dt><h3>軽量シャッター</h3></dt>
-<dd>比較的短い間隔で連続撮影ができるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/lsrts_3.0.html">軽量シャッター for RICOH THETA S（3.0）</a></dd>
+<dt><h3>LightweightShutter</h3></dt>
+<dd>"LightweightShutter" makes it possible to repeat shooting at relatively short intervals.</dd>
+<dd><a href="/theta_s/bookmarklet/lsrts_3.0.html">LightweightShutter for RICOH THETA S (3.0)</a></dd>
 <dd><img class="screenshot" src="/theta_s/img/lsrts-ss.jpg" width="240"></dd>
 <dd>
-<h4>更新履歴</h4>
+<h4>History</h4>
 <dl>
-<dt>1.0</dt>
+<dt>1.0<dt>
 <dd>2016/01/25</dd>
-<dd>公開</dd>
 <dt><a href="/theta_s/bookmarklet/lsrts_1.1.html">1.1</a></dt>
 <dd>2016/01/27</dd>
-<dd>2,125文字</dd>
-<dd>“%20”を半角スペースに修正</dd>
+<dd>2,125 characters</dd>
+<dd>Changed "%20" for " "
 <dt><a href="/theta_s/bookmarklet/lsrts_2.0.html">2.0</a></dt>
 <dd>2016/02/10</dd>
-<dd>2,336文字</dd>
-<dd>親ウィンドウ（タブ）を閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
+<dd>2,336 characters</dd>
+<dd>It now continues to function even after the parent window (tab) is closed / Changed the destination URL to "/osc/info" / Added display of the number of processing tasks</dd>
 <dt><a href="/theta_s/bookmarklet/lsrts_3.0.html">3.0</a></dt>
 <dd>2016/02/13</dd>
-<dd>2,388文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>2,388 characters</dd>
+<dd>It now functions just in the current window (tab)
 </dl>
 </dd>
-<dt><h3>3秒シャッター</h3></dt>
-<dd>3秒固定のタイマー撮影ができるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/3ssrts_3.0.html">3秒シャッター for RICOH THETA S（3.0）</a></dd>
-<dd><img img class="screenshot" src="/theta_s/img/3ssrts-ss.jpg" width="240"></dd>
+<dt><h3>3SecondsShutter</h3></dt>
+<dd>"3SecondsShutter" enables 3 seconds timer shooting.</dd>
+<dd><a href="/theta_s/bookmarklet/3ssrts_3.0.html">3SecondsShutter for RICOH THETA S (3.0)</a></dd>
+<dd><img class="screenshot" src="/theta_s/img/3ssrts-ss.jpg" width="240"></dd>
 <dd>
-<h4>更新履歴</h4>
+<h4>History</h4>
 <dl>
 <dt>1.0</dt>
 <dd>2016/01/25</dd>
-<dd>公開</dd>
 <dt><a href="/theta_s/bookmarklet/3ssrts_1.1.html">1.1</a></dt>
 <dd>2016/01/27</dd>
-<dd>2,221文字</dd>
-<dd>“%20”を半角スペースに修正</dd>
+<dd>2,221 characters</dd>
+<dd>Changed "%20" for " "
 <dt><a href="/theta_s/bookmarklet/3ssrts_2.0.html">2.0</a></dt>
 <dd>2016/02/10</dd>
-<dd>2,430文字</dd>
-<dd>親ウィンドウ（タブ）を閉じても動作するように修正、遷移先URLを"/osc/info"に変更、処理中のタスク数の表示を追加</dd>
+<dd>2,430 characters</dd>
+<dd>It now continues to function even after the parent window is closed / Changed the destination URL to "/osc/info" / Added display of the number of processing tasks</dd>
 <dt><a href="/theta_s/bookmarklet/3ssrts_3.0.html">3.0</a></dt>
 <dd>2016/02/13</dd>
-<dd>2,482文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>2,482 characters</dd>
+<dd>It now functions just in the current window (tab)
 </dl>
 </dd>
-<dt><h3>ボリュームチェンジャー</h3></dt>
-<dd>シャッター音のボリュームを調節できるブックマークレットです。</dd>
-<dd><a href="/theta_s/bookmarklet/vcrts_2.0.html">ボリュームチェンジャー for RICOH THETA S（2.0）</a></dd>
-<dd><img img class="screenshot" src="/theta_s/img/vcrts-ss.jpg" width="240"></dd>
+<dt><h3>VolumeChanger</h3></dt>
+<dd>"VolumeChanger" provides control of shutter sound's volume.</dd>
+<dd><a href="/theta_s/bookmarklet/vcrts_2.0.html">3SecondsShutter for RICOH THETA S (2.0)</a></dd>
+<dd><img class="screenshot" src="/theta_s/img/vcrts-ss.jpg" width="240"></dd>
 <dd>
-<h4>更新履歴</h4>
+<h4>History</h4>
 <dl>
 <dt><a href="/theta_s/bookmarklet/vcrts_1.0.html">1.0</a></dt>
 <dd>2016/02/10</dd>
-<dd>2,585文字</dd>
-<dd>公開</dd>
+<dd>2,585 characters</dd>
 <dt><a href="/theta_s/bookmarklet/vcrts_2.0.html">2.0</a></dt>
 <dd>2016/02/13</dd>
-<dd>2,623文字</dd>
-<dd>同一ウィンドウ（タブ）内で動作するように変更</dd>
+<dd>2,623 characters</dd>
+<dd>It now functions just in the current window (tab)
 </dl>
 </dd>
 </dl>
-<h2>お問い合わせ</h2>
-<p>お気づきの点やご不明の点などがありましたら、Twitterで<a href="http://twitter.com/shikaku1068/">shikaku1068</a>までご連絡ください。可能な範囲で対応いたします。</p>
+<h2>Contact</h2>
+If you need any help, please contact me on Twitter at <a href="http://twitter.com/shikaku1068/">shikaku1068</a>.
 </div>
 </body>
 </html>
