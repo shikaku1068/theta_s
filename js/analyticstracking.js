@@ -12,7 +12,7 @@
 
     ga('create', 'UA-72892673-1', 'auto');
     ga('send', 'pageview');
-  */}).toString().replace(/\/\*([\S\s]*?)\*\//, '$1');
+  */}).toString().match(/\/\*([^]*)\*\//)[1];
   var scriptElement = document.createElement('script');
   scriptElement.appendChild(document.createTextNode(scriptText));
   document.head.appendChild(scriptElement);
