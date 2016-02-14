@@ -2,7 +2,6 @@
   var queryString = location.search.substring(1);
   var matches = queryString.match(/(?:^|&)notracking(?:=|&|$)/i)
   if(matches) {
-alert('notracking');
     return;
   }
   var scriptText = (function() {/*
