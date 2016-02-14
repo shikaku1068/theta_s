@@ -3,6 +3,19 @@
 <title>LightweightShutter for RICOH THETA S (3.0)</title>
 <script src="/theta_s/js/jatitle.js">/*軽量シャッター for RICOH THETA S (3.0)*/</script>
 <script src="/theta_s/js/bookmarkletcode.js">/*
+javascript:
+(function(g,k,u,i,d){
+  g='RICOH THETA S';
+  k='LightweightShutter for '+g+' (3.0)';
+  u='http://192.168.1.1/osc/';
+  i=u+'info';
+  if(location.href.indexOf(i)!=0){
+    alert('Run this bookmarklet again after the URL below will be opened. (Wi-Fi connection with '+g+' is required.)\n\n'+i);
+    location=i;
+    return;
+  }
+  d=document;
+  d.open();
 */</script>
 <script src="/theta_s/js/analyticstracking.js"></script>
 <body></body>
