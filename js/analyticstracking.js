@@ -5,6 +5,7 @@
   if(regExp.test(queryString)) {
     addEventListener('load', function() {
       aElements = document.getElementsByTagName('a');
+alert(aElements.length);
       for(var i = 0; i < aElements.length; i++) {
         var aElement = aElements[i];
         var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
