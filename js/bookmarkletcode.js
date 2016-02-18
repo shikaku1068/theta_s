@@ -1,7 +1,7 @@
 (function() {
   var scriptElements = document.getElementsByTagName('script');
   var bookmarkletCode = scriptElements[scriptElements.length - 1].innerHTML;
-  bookmarkletCode = bookmarkletCode.replace(/\/\*([\S\s]*?)\*\/|\/\/([^\r\n]*)/g, '$1');
+  bookmarkletCode = bookmarkletCode.replace(/\/\*([^]*?)\*\/|\/\/([^\n]*\n?)|[^]/g, '$1$2');
   bookmarkletCode = bookmarkletCode.replace(/<\\\//g, '</');
   bookmarkletCode = bookmarkletCode.replace(/^\s+|\s*\n\s*|\s+$/g, '');
   if(bookmarkletCode) {
