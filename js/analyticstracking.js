@@ -5,12 +5,12 @@
   if(regExp.test(queryString)) {
     addEventListener('load', function() {
       aElements = document.getElementsByTagName('a');
-alert(aElements.length);
       for(var i = 0; i < aElements.length; i++) {
         var aElement = aElements[i];
-        var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
-        if(/^(https?:)?\/\//i.test(aHref) == false) {
-          aElement.href = aHref + (/\?/.test(aHref)? '&': '?') + NOTRACKING_KEY;
+        var href = aElement.href.replace(/^\s+|\s+$/g, '');
+        var regExp = new RegExp('https?://' + document.domain + '(?:/|$)', 'i');
+        if(regExp.test(href)) {
+          aElement.href = href + (/\?/.test(href)? '&': '?') + NOTRACKING_KEY;
         }
       }
     });
