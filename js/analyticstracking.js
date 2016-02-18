@@ -3,15 +3,16 @@
   var queryString = location.search.substring(1);
   var regExp = new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i');
   if(regExp.test(queryString)) {
-    aElements = document.getElementsByTagName('a');
-alert(aElements.length);
-    for(var i = 0; i < aElements.length; i++) {
-      var aElement = aElements[i];
-      var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
-      if(/^(https?:)?\/\//i.test(aHref) == false) {
-        aElement.href = aHref + (/\?/.test(aHref)? '&': '?') + NOTRACKING_KEY;
+    addEventListener('load', function() {
+      aElements = document.getElementsByTagName('a');
+      for(var i = 0; i < aElements.length; i++) {
+        var aElement = aElements[i];
+        var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
+        if(/^(https?:)?\/\//i.test(aHref) == false) {
+          aElement.href = aHref + (/\?/.test(aHref)? '&': '?') + NOTRACKING_KEY;
+        }
       }
-    }
+    });
     return;
   }
   var scriptText = (function() {/*
