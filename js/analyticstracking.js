@@ -1,7 +1,7 @@
 (function() {
   var NOTRACKING_KEY = "notracking";
   var queryString = location.search.substring(1);
-  var matches = queryString.match(new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i');
+  var matches = queryString.match(new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i'));
   if(matches) {
     aElements = document.getElementsByTagName('a');
     for(var i = 0; i < aElements.length; i++) {
