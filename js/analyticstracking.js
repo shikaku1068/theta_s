@@ -1,7 +1,16 @@
 (function() {
+  var NOTRACKING_KEY = "notracking";
   var queryString = location.search.substring(1);
-  var matches = queryString.match(/(?:^|&)notracking(?:=|&|$)/i)
+  var matches = queryString.match(new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i');
   if(matches) {
+    aElements = document.getElementsByTagName('a');
+    for(var i = 0; i < aElements.length; i++) {
+      var aElement = aElements[i];
+      var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
+      if(/^(https?:)?\/\//i.test(aHref) == false) {
+        aElement.href = aHref + (/\?/.test(aHref)? '&': '?') + NOTRACKING_KEY;
+      }
+    }
     return;
   }
   var scriptText = (function() {/*
