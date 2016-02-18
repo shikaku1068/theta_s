@@ -1,13 +1,13 @@
 (function() {
   var NOTRACKING_KEY = "notracking";
   var queryString = location.search.substring(1);
-  var matches = queryString.match(new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i'));
-  if(matches) {
-alert(4);
+  var regExp = new RegExp('(?:^|&)' + NOTRACKING_KEY + '(?:=|&|$)', 'i');
+  if(regExp.test(queryString)) {
     aElements = document.getElementsByTagName('a');
     for(var i = 0; i < aElements.length; i++) {
       var aElement = aElements[i];
       var aHref = aElement.href.replace(/^\s+|\s+$/g, '');
+alert(6);
       if(/^(https?:)?\/\//i.test(aHref) == false) {
         aElement.href = aHref + (/\?/.test(aHref)? '&': '?') + NOTRACKING_KEY;
       }
